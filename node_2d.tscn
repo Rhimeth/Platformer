@@ -1,0 +1,223 @@
+[gd_scene load_steps=37 format=3 uid="uid://c3rpkoorfgi2"]
+
+[ext_resource type="Texture2D" uid="uid://v8bkg0nj6hum" path="res://Assets/background_0.png" id="2_k1jfa"]
+[ext_resource type="Texture2D" uid="uid://dyridt50tcs0f" path="res://Assets/Char/Idle/adventurer-idle-00.png" id="3_67js2"]
+[ext_resource type="Script" path="res://Player2D.gd" id="3_chvw3"]
+[ext_resource type="Texture2D" uid="uid://dabh8rl67res" path="res://Assets/Char/Attack/adventurer-attack1-00.png" id="4_7aq5k"]
+[ext_resource type="Texture2D" uid="uid://dro7wnc7yylrt" path="res://Assets/Char/Attack/adventurer-attack1-01.png" id="5_ghr1d"]
+[ext_resource type="Texture2D" uid="uid://dxs7bmasbuudq" path="res://Assets/Char/Idle/adventurer-idle-01.png" id="5_msok8"]
+[ext_resource type="Texture2D" uid="uid://m7r2qh0fj071" path="res://Assets/Char/Idle/adventurer-idle-2-00.png" id="6_l0le0"]
+[ext_resource type="Texture2D" uid="uid://cqgw7nvdigmb7" path="res://Assets/Char/Attack/adventurer-attack1-02.png" id="6_tdfm7"]
+[ext_resource type="Texture2D" uid="uid://bodbvecqrfn8u" path="res://Assets/Char/Attack/adventurer-attack1-03.png" id="7_ocayf"]
+[ext_resource type="Texture2D" uid="uid://bnnalhar4ndea" path="res://Assets/Char/Idle/adventurer-idle-2-01.png" id="7_t2wk2"]
+[ext_resource type="Texture2D" uid="uid://du2rlbevgts8n" path="res://Assets/Char/Idle/adventurer-idle-2-02.png" id="8_6g4uv"]
+[ext_resource type="Texture2D" uid="uid://dgsu1t8kalg4a" path="res://Assets/Char/Attack/adventurer-attack1-04.png" id="8_xhmf8"]
+[ext_resource type="Texture2D" uid="uid://b1xxj3wv2hlnu" path="res://Assets/Char/Idle/adventurer-idle-2-03.png" id="9_cxn6i"]
+[ext_resource type="Texture2D" uid="uid://d2gi154ww2sbv" path="res://Assets/Char/Attack/adventurer-attack2-01.png" id="9_keili"]
+[ext_resource type="Texture2D" uid="uid://31vwpb6e2arf" path="res://Assets/Char/Attack/adventurer-attack2-02.png" id="10_0y3qs"]
+[ext_resource type="Texture2D" uid="uid://scd8aobxed8k" path="res://Assets/Char/Idle/adventurer-idle-02.png" id="10_dd5qt"]
+[ext_resource type="Texture2D" uid="uid://5dlef5xqt8r2" path="res://Assets/Char/Idle/adventurer-idle-03.png" id="11_tq2un"]
+[ext_resource type="Texture2D" uid="uid://bsl36iueerflq" path="res://Assets/Char/Attack/adventurer-attack2-03.png" id="11_y1nhm"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="12_l7ehe"]
+[ext_resource type="Texture2D" uid="uid://ceeh70crnvenn" path="res://Assets/Char/Attack/adventurer-attack2-04.png" id="12_ppsj8"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="13_domqb"]
+[ext_resource type="Texture2D" uid="uid://tss4qr7bmhin" path="res://Assets/Char/Attack/adventurer-attack2-05.png" id="13_vu7x7"]
+[ext_resource type="Texture2D" uid="uid://bfc8f76m56yjg" path="res://Assets/Char/Movement/adventurer-jump-00.png" id="17_gfs4i"]
+[ext_resource type="Texture2D" uid="uid://djaioq8vll8bb" path="res://Assets/Char/Movement/adventurer-jump-01.png" id="18_iywdk"]
+[ext_resource type="Texture2D" uid="uid://rtjg4rkf5uvu" path="res://Assets/Char/Movement/adventurer-jump-02.png" id="19_5cp46"]
+[ext_resource type="Texture2D" uid="uid://bn3g23dvuvdxr" path="res://Assets/Char/Movement/adventurer-jump-03.png" id="20_gxttr"]
+[ext_resource type="Texture2D" uid="uid://dlw83bwdx1pmg" path="res://Assets/Char/Movement/adventurer-run-01.png" id="21_ayfbb"]
+[ext_resource type="Texture2D" uid="uid://drtucbuh0qf4w" path="res://Assets/Char/Movement/adventurer-run-02.png" id="22_h8fv8"]
+[ext_resource type="Texture2D" uid="uid://eeg5x6b81b0s" path="res://Assets/Char/Movement/adventurer-run-03.png" id="23_x11jq"]
+[ext_resource type="Texture2D" uid="uid://7pitgymv31yf" path="res://Assets/Char/Movement/adventurer-run-04.png" id="24_qx67i"]
+[ext_resource type="Texture2D" uid="uid://cpgleoi6j2yhq" path="res://Assets/Char/Movement/adventurer-run-05.png" id="25_alpnx"]
+[ext_resource type="Texture2D" uid="uid://cgjx1uj8c0k3m" path="res://Assets/Char/Movement/adventurer-slide-00.png" id="31_ebmf0"]
+[ext_resource type="Texture2D" uid="uid://d1gs6lw6m8ypr" path="res://Assets/Char/Movement/adventurer-slide-01.png" id="32_5i1xg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4xm5"]
+size = Vector2(20, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6wfb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7aq5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ghr1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tdfm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ocayf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xhmf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_keili")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0y3qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_y1nhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ppsj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vu7x7")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_67js2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_msok8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l0le0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t2wk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6g4uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cxn6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dd5qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tq2un")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_gfs4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_iywdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5cp46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5cp46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gxttr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gxttr")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_ayfbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_h8fv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_x11jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qx67i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_alpnx")
+}],
+"loop": false,
+"name": &"Run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_ebmf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_5i1xg")
+}],
+"loop": false,
+"name": &"Slide",
+"speed": 7.0
+}]
+
+[sub_resource type="TileSet" id="TileSet_mgan3"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_right = 1149.0
+offset_bottom = 647.0
+texture = ExtResource("2_k1jfa")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(10, -156)
+collision_layer = 2
+floor_constant_speed = true
+floor_snap_length = 2.5
+platform_on_leave = 1
+script = ExtResource("3_chvw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+visible = false
+position = Vector2(183, 349)
+shape = SubResource("RectangleShape2D_y4xm5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(183, 346)
+scale = Vector2(1.04, 1.08108)
+sprite_frames = SubResource("SpriteFrames_l6wfb")
+animation = &"Idle"
+script = ExtResource("12_l7ehe")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(233, 334)
+scale = Vector2(-0.594968, 1.42657)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = -0.14
+drag_vertical_offset = -0.15
+script = ExtResource("13_domqb")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(232, 376)
+scale = Vector2(10.3503, 0.75166)
+constant_linear_velocity = Vector2(240, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-774, -384)
+rotation = -0.00229136
+tile_set = SubResource("TileSet_mgan3")
+collision_animatable = true
+format = 2
+layer_0/name = "World"
+layer_0/tile_data = PackedInt32Array(2752563, 327681, 4, 2752565, 458753, 4, 2752564, 458753, 4, 2752566, 458753, 4, 2752567, 393217, 4, 2752568, 458753, 4, 2752569, 458753, 4, 2752571, 458753, 4, 2752570, 458753, 4, 2752572, 524289, 4, 2752573, 458753, 4, 2752574, 458753, 4, 2752575, 589825, 4, 2555971, 327681, 4, 2555972, 458753, 4, 2555973, 458753, 4, 2555974, 458753, 4, 2555975, 458753, 4, 2555976, 458753, 4, 2555977, 589825, 4)
+layer_1/name = "Level"
+layer_1/tile_data = PackedInt32Array(1703964, 589825, 5)
+
+[connection signal="animation_finished" from="Player/AnimatedSprite2D" to="Player" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="Player/AnimatedSprite2D" to="Player" method="_on_sprite_2d_animation_finished"]
